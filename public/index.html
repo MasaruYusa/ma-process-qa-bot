@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&Aプロセス QA Bot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🤝 M&Aプロセス QA Bot</h1>
+            <p class="subtitle">M&A（合併・買収）に関する質問に回答します</p>
+            <div class="stats">
+                <span id="qa-count">読み込み中...</span>
+            </div>
+        </header>
+
+        <div class="quick-topics">
+            <h3>💡 よくある質問</h3>
+            <div class="topic-buttons" id="topic-buttons">
+                <!-- JavaScriptで動的に生成 -->
+            </div>
+        </div>
+
+        <div class="chat-container">
+            <div class="messages" id="messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <strong>M&A QA Bot</strong><br>
+                        こんにちは！M&Aプロセスに関する質問をお気軽にどうぞ。
+                    </div>
+                </div>
+            </div>
+
+            <form class="input-form" id="input-form">
+                <input
+                    type="text"
+                    id="question-input"
+                    placeholder="質問を入力してください（例: デューデリジェンスとは？）"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit" id="send-button">
+                    送信
+                </button>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <p>APIキー不要のルールベースQAシステム | TypeScript + Express.js</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
